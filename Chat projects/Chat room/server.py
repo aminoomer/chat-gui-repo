@@ -41,5 +41,3 @@ while True:
     client.send("you are now connected".encode('utf-8'))
     thread = threading.Thread(target=handler,args=(client,))
     thread.start()
-
-# comment line
