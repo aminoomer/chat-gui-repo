@@ -3,7 +3,7 @@ import threading
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = "127.0.0.1"
-port = 7002
+port = 8001
 
 s.bind((host, port))
 s.listen(5)
