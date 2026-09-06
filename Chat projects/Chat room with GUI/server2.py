@@ -18,7 +18,7 @@ class Client:
 class ChatServer:
     """Core server logic (no GUI dependencies)."""
     
-    def __init__(self, host: str = "127.0.0.1", port: int = 8001, 
+    def __init__(self, host: str = "127.0.0.1", port: int = 8002, 
                  on_status_change: Optional[Callable] = None,
                  on_message: Optional[Callable] = None):
         self.host = host
@@ -275,17 +275,22 @@ Better data structure	Created Client dataclass instead of dict
 Chat history	Added Text widget to display messages
 Graceful shutdown	Proper stop() method that closes all clients
 Further Enhancements (Optional):
-Persistent storage — Save chat history to a database
-User authentication — Add login/password system
-Custom message protocol — Use JSON for structured data (username, timestamp, etc.)
-Queue-based messaging — Use queue.Queue instead of direct socket sends
-Async I/O — Replace threading with asyncio for better scalability
+Persistent storage
+#— Save chat history to a database
+User authentication
+#— Add login/password system
+Custom message protocol
+#— Use JSON for structured data (username, timestamp, etc.)
+Queue-based messaging
+#— Use queue.Queue instead of direct socket sends
+Async I/O
+# — Replace threading with asyncio for better scalability
 Would you like me to implement any of these enhancements?
 
 could you rewrite above code to include authentication
 
 View file Chat projects/Chat room with GUI/server.py
-Here's a complete rewrite with user authentication, including user registration, login, secure password hashing, and persistent user storage:
+# Here's a complete rewrite with user authentication, including user registration, login, secure password hashing, and persistent user storage:
 
 Python
 import socket
