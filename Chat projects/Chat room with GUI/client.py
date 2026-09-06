@@ -35,12 +35,13 @@ class Client:
         self.input_entry.pack(side=tk.RIGHT)
 
     def connect(self):
-        self.username = self.username_entry.get().strip()
+        self.username = "self.username_entry.get().strip()"
+        
         if not self.username:
             return
 
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.socket.connect(("localhost", 8000))
+        self.socket.connect(("127.0.0.1", 8001))
 
         threading.Thread(target=self.receive_messages).start()
 
@@ -49,7 +50,7 @@ class Client:
         self.input_entry.config(state=tk.NORMAL)
         self.send_button.config(state=tk.NORMAL)
 
-        self.send_message("{} has joined the chat.".format(self.username))
+        #self.send_message("{} has joined the chat.".format(self.username))
 
     def receive_messages(self):
         while True:

@@ -20,7 +20,7 @@ class Server:
 
     def start_server(self):
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.socket.bind(("localhost", self.port))
+        self.socket.bind(("127.0.0.1", self.port))
         self.socket.listen(5)
 
         self.status_label.config(text="Server is running on port {}".format(self.port))
@@ -84,6 +84,6 @@ if __name__ == "__main__":
     root = tk.Tk()
     root.title("Chat Room Server")
 
-    server = Server(root, 8000)
+    server = Server(root, 8001)
 
     root.mainloop()
