@@ -41,7 +41,7 @@ class Client:
             return
 
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.socket.connect(("127.0.0.1", 8002))
+        self.socket.connect(("127.0.0.1", 8001))
 
         threading.Thread(target=self.receive_messages).start()
 
